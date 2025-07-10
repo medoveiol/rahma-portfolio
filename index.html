@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rahma Obaid | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #fef7f2;
+      --primary-color: #5b362d;
+      --text-color: #3d3d3d;
+      --accent-color: #ffffff;
+      --highlight-color: #3e7c59;
+      --transition: 0.3s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background-color: var(--accent-color);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav .logo img {
+      height: 40px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color var(--transition);
+    }
+
+    nav ul li a:hover {
+      color: var(--highlight-color);
+    }
+
+    .wrapper {
+      max-width: 1000px;
+      margin: auto;
+      background: var(--accent-color);
+      border-radius: 20px;
+      padding: 3rem;
+      margin-top: 2rem;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 2.7rem;
+      color: var(--primary-color);
+    }
+
+    .intro {
+      margin-bottom: 3rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--highlight-color);
+      border-left: 4px solid var(--highlight-color);
+      padding-left: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 1.8rem;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--bg-color);
+      color: var(--primary-color);
+      font-size: 0.85rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      margin: 4px 4px 4px 0;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 1.5rem;
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      color: var(--highlight-color);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="Rahma Logo">
+    </div>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#graphics">Graphics</a></li>
+      <li><a href="#more">More</a></li>
+    </ul>
+  </nav>
+
+  <div class="wrapper">
+    <header>
+      <h1>Rahma Obaid</h1>
+      <div>
+        <a href="mailto:rahmaobaid17@gmail.com">rahmaobaid17@gmail.com</a><br />
+        <a href="https://www.linkedin.com/in/rahma-obaid-84ba13242/">LinkedIn</a>
+      </div>
+    </header>
+
+    <div class="intro">
+      <p>Computer Science student at King Abdulaziz University, passionate about web development, AI, and graphic design. I enjoy creating meaningful user experiences and building smart, beautiful interfaces that solve real-world problems.</p>
+    </div>
+
+    <div class="section" id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>RAKN System</h3>
+          <p>A smart violation management system powered by AI and web tech, including live document parsing and admin tools.</p>
+          <a href="https://rakn.atwebpages.com/">→ View Project</a>
+        </div>
+        <div class="card">
+          <h3>AI Smart Parking</h3>
+          <p>IoT and ML based system for detecting available parking spots, improving campus logistics.</p>
+        </div>
+        <div class="card">
+          <h3>University Website Redesign</h3>
+          <p>Modernized the official website front-end using accessibility and responsive UI/UX best practices.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="skills">
+      <h2>Skills</h2>
+      <div>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Python</span>
+        <span class="tag">PHP</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Figma</span>
+        <span class="tag">Illustrator</span>
+        <span class="tag">Photoshop</span>
+      </div>
+    </div>
+
+    <div class="section" id="graphics">
+      <h2>Graphics</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>IEEE KAU</h3>
+          <p>Designed high-impact visual materials for technical events and student community campaigns.</p>
+        </div>
+        <div class="card">
+          <h3>ROBOCON Events</h3>
+          <p>Created cohesive graphic materials including posters, brochures, and digital content for robotics outreach.</p>
+        </div>
+        <div class="card">
+          <h3> Full Design Gallery</h3>
+          <p>Explore my visual design work including posters, event branding, and digital illustrations.</p>
+          <a href="https://drive.google.com/drive/folders/1e7lk7IXK6TjjwWfek-IOZ8q-pdgMxyds?usp=sharing" target="_blank"> View Designs on Google Drive</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="more">
+      <h2>More</h2>
+      <ul>
+        <li><a href="https://x.com/r_obaid1?s=21">Twitter</a></li>
+        <li><a href="https://drive.google.com/drive/folders/1e7lk7IXK6TjjwWfek-IOZ8q-pdgMxyds?usp=sharing">Project Gallery</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>
