@@ -41,8 +41,14 @@
       z-index: 999;
     }
 
-    nav .logo img {
+    .logo img {
       height: 40px;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
     }
 
     nav ul {
@@ -149,14 +155,40 @@
     }
 
     @media (max-width: 768px) {
+      nav {
+        flex-wrap: wrap;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
       nav ul {
         flex-direction: column;
-        gap: 0.8rem;
+        width: 100%;
+        display: none;
+        margin-top: 1rem;
+      }
+
+      nav ul.show {
+        display: flex;
       }
 
       header {
         flex-direction: column;
         gap: 1rem;
+      }
+
+      .wrapper {
+        padding: 1.5rem;
+      }
+
+      .intro {
+        font-size: 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
       }
     }
   </style>
@@ -167,7 +199,8 @@
     <div class="logo">
       <img src="logo.png" alt="Rahma Logo">
     </div>
-    <ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul id="nav-links">
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#graphics">Graphics</a></li>
@@ -234,7 +267,7 @@
           <p>Created cohesive graphic materials including posters, brochures, and digital content for robotics outreach.</p>
         </div>
         <div class="card">
-          <h3> Full Design Gallery</h3>
+          <h3>Full Design Gallery</h3>
           <p>Explore my visual design work including posters, event branding, and digital illustrations.</p>
           <a href="https://drive.google.com/drive/folders/1e7lk7IXK6TjjwWfek-IOZ8q-pdgMxyds?usp=sharing" target="_blank"> View Designs on Google Drive</a>
         </div>
@@ -249,6 +282,14 @@
       </ul>
     </div>
   </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("show");
+    }
+  </script>
 </body>
 
 </html>
+
+
